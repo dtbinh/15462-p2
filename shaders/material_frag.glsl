@@ -11,6 +11,5 @@ void main(void)
 	// Your shader code here.
 	// Note that this shader won't compile since gl_FragColor is never set.
 	vec3 reflect_vec = reflect(cam_dir, normalize(norm));
-	gl_FragColor = textureCube(cubemap, reflect_vec);
-	
+	gl_FragColor = textureCube(cubemap, reflect_vec);	
 }

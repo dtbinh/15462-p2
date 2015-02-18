@@ -44,12 +44,12 @@ struct Face
 };
 
 enum ObjFormat
-    {
+{
 	VERTEX_ONLY = 1 << 0,
 	VERTEX_UV = 1 << 1,
 	VERTEX_NORMAL = 1 << 2,
 	VERTEX_UV_NORMAL = 1 << 3
-    };
+};
 
 Mesh::Mesh()
 {
@@ -57,6 +57,10 @@ Mesh::Mesh()
     has_normals = false;
     has_colors = 0;
 }
+
+unsigned int Mesh::index1[] = {0, 1, 2};
+unsigned int Mesh::index2[] = {1, 2, 0};
+unsigned int Mesh::index3[] = {2, 0, 1};
 
 Mesh::~Mesh() { }
 

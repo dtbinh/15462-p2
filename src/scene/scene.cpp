@@ -49,7 +49,7 @@ bool Scene::subdivide_geometries()
     start = std::clock();
     for (int i = 0; i < n; i++)
     {
-	success &= geometries[i]->subdivide();
+      success &= geometries[i]->subdivide();
     }
     double duration = (std::clock() - start)/double(CLOCKS_PER_SEC);
     std::cout << "Subdivision took " << duration << " seconds." << std::endl;
