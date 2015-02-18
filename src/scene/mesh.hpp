@@ -13,6 +13,8 @@
 
 #include <vector>
 #include <cassert>
+#include <unordered_map>
+#include <string>
 
 namespace _462 {
 
@@ -30,6 +32,23 @@ struct MeshTriangle
     unsigned int vertices[3];
 };
 
+struct MeshEdge
+{
+    unsigned int vertices[2]; // indices of the original edge's vertices
+    unsigned int vertex_new;	// index of new generated vertex
+};
+
+struct MeshNeighbor
+{
+  std::vector < unsigned int > indices; //index of neighbors of given vertice
+};
+
+struct MeshFace
+{
+  unsigned int vertices[3];
+  int vertices_neighbor[3];		//index of neighbor vertices of edges
+};
+
 /**
  * A mesh of triangles.
  */
@@ -42,6 +61,18 @@ public:
 
     typedef std::vector< MeshTriangle > MeshTriangleList;
     typedef std::vector< MeshVertex > MeshVertexList;
+
+    //----------------my added members---------------
+    typedef std::vector< MeshNeighbor > NeighborList;
+    typedef std::vector< MeshEdge > EdgeList;
+    typedef std::vector< MeshFace > FaceList2;
+    typedef std::unordered_multimap<int, int> VertMap;
+    typedef std::unordered_multimap<int, int>::iterator VertMapIterator;
+
+    typedef std::unordered_multimap<std::string, int> EdgeMap;
+    typedef std::unordered_multimap<std::string, int>::iterator EdgeMapIterator;
+
+    //----------------------------------------------------
 
     // The list of all triangles in this model.
     MeshTriangleList triangles;
@@ -69,6 +100,25 @@ public:
 private:
     typedef std::vector< float > FloatList;
     typedef std::vector< unsigned int > IndexList;
+
+    MeshTriangleList temp_triangles;		 //temp storage place
+    MeshVertexList temp_vertices;        //temp storage place
+    NeighborList neighbors;
+
+    //EdgeList edges;
+    FaceList2 faces;
+    void generateEdgeNeighbor();		//generate neighbors and faces
+    int edgeIndexInTriangle(unsigned int v1, unsigned int v2, MeshTriangle t3);
+    void getAdjacentVertices(unsigned int v, int &v1, int &v2, MeshTriangle t3);
+    void generateNeighbor(unsigned int v, int v1, int v2); //generate neighbor in triangle
+    void generateOddVertices();				// add odd vertices
+    void adjustEvenVertices();				// update even vertices
+    int isEdgegenerateed(unsigned int v1, unsigned int v2, EdgeList e, EdgeMap* edgeMap);
+    std::string genKeyforEdge(int v1, int v2); //generate edge key from given vertices
+
+    static unsigned int index1[3];
+    static unsigned int index2[3];
+    static unsigned int index3[3];
 
     // the vertex data used for GL rendering
     FloatList vertex_data;
