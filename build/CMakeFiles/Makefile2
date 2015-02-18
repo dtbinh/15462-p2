@@ -171,10 +171,10 @@ p2/preinstall:
 # Target rules for target p2/CMakeFiles/p2.dir
 
 # All Build rule for target.
-p2/CMakeFiles/p2.dir/all: scene/CMakeFiles/scene.dir/all
 p2/CMakeFiles/p2.dir/all: application/CMakeFiles/application.dir/all
-p2/CMakeFiles/p2.dir/all: SDLMain/CMakeFiles/SDLMain.dir/all
 p2/CMakeFiles/p2.dir/all: math/CMakeFiles/math.dir/all
+p2/CMakeFiles/p2.dir/all: scene/CMakeFiles/scene.dir/all
+p2/CMakeFiles/p2.dir/all: SDLMain/CMakeFiles/SDLMain.dir/all
 p2/CMakeFiles/p2.dir/all: tinyxml/CMakeFiles/tinyxml.dir/all
 	$(MAKE) -f p2/CMakeFiles/p2.dir/build.make p2/CMakeFiles/p2.dir/depend
 	$(MAKE) -f p2/CMakeFiles/p2.dir/build.make p2/CMakeFiles/p2.dir/build

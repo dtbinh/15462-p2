@@ -146,18 +146,19 @@ void Mesh::generateOddVertices() {
     MeshVertex odd_vertices_temp;
     MeshEdge edge_temp;
     EdgeList edges;
-    EdgeMap edgeMap;
+    EdgeSingleMap edgeMap;
     unsigned int new_vertex[3];
     temp_vertices = vertices;
     double duration = 0.0;
+    double duration2 = 0.0;
 
     for (int i=0; i<numTriangles; i++) {
       for (int j=0; j<3; j++) {
         std::clock_t start = std::clock();
         int new_index = isEdgegenerateed(faces[i].vertices[index1[j]],
                                   faces[i].vertices[index2[j]],
-                                  edges, &edgeMap);
-        duration += (std::clock() - start)/double(CLOCKS_PER_SEC);
+                                  edges, &edgeMap, duration);
+        duration2 += (std::clock() - start) / double(CLOCKS_PER_SEC);
         new_vertex[index3[j]] = new_index;
         if (new_index < 0) {
           if (faces[i].vertices_neighbor[index3[j]] >= 0) {
@@ -218,18 +219,23 @@ void Mesh::generateOddVertices() {
       temp_triangles.push_back(triangle_temp);
     }
     std::cout << "Is edge took " << duration << " seconds." << std::endl;
+    std::cout << "Is edge took " << duration2 << " seconds." << std::endl;
 }
 
 int Mesh::isEdgegenerateed(unsigned int v1, unsigned int v2,
-                      EdgeList e, EdgeMap* edgeMap) {
+                      EdgeList e, EdgeSingleMap* edgeMap,
+                      double &duration) {
+  std::clock_t start = std::clock();
   std::string key = genKeyforEdge(v1, v2);
-  std::pair <EdgeMapIterator, EdgeMapIterator> ret;
-  ret = edgeMap->equal_range(key);
-  if ((e.size() < 1) || (ret.first == ret.second)) {
-      edgeMap->insert(EdgeMap::value_type(key, e.size()));
+  int count = edgeMap->count(key);
+  if (count == 0) {
+      edgeMap->insert(EdgeSingleMap::value_type(key, e.size()));
+      duration += (std::clock() - start) / double(CLOCKS_PER_SEC);
       return -1;
   }
-  return e[ret.first->second].vertex_new;
+  int index = edgeMap->find(key)->second;
+  duration += (std::clock() - start) / double(CLOCKS_PER_SEC);
+  return e[index].vertex_new;
 }
 
 void Mesh::adjustEvenVertices() {
