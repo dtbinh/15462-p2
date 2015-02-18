@@ -10,7 +10,7 @@ class Shader
 {
 public:
 
-    Shader();
+  Shader();
 	Shader(const char* vertex_shader, const char* fragment_shader);
 
     ~Shader();
@@ -27,11 +27,10 @@ public:
     void unbind();
 
 protected:
-	
+
     GLhandleARB program_;
 };
 
 } /* _462 */
 
 #endif /* _462_GLSL_SHADER_HPP_ */
-
