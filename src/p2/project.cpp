@@ -52,8 +52,8 @@ bool GlslProject::initialize( const SceneRenderer* renderer, int width, int heig
     GLhandleARB prog;
 
     material_shader = new Shader();
-    material_shader->compile_from_file("shaders/normal_vert.glsl",
-				       "shaders/normal_frag.glsl");
+    material_shader->compile_from_file("shaders/material_vert.glsl",
+				       "shaders/material_frag.glsl");
 
     // setup the cubemap
     cubemap = Cubemap(cubemap_faces, CUBEMAP_TEXTURE_NUM);
