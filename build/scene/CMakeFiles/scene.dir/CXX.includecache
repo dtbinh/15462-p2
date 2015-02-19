@@ -6,53 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/Users/zhubofei/15-462/p2/src/application/imageio.hpp
-cstdlib
--
-
-/Users/zhubofei/15-462/p2/src/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/application/opengl.hpp
 GL/glew.h
 -
 SDL_opengl.h
 -
 
-/Users/zhubofei/15-462/p2/src/math/camera.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/glew/GL/glew.h
+stddef.h
+-
+inttypes.h
+-
+stdint.h
+-
+inttypes.h
+-
+OpenGL/glu.h
+-
+GL/glu.h
+-
+
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/camera.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/math/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/vector.hpp
 math/quaternion.hpp
-/Users/zhubofei/15-462/p2/src/math/math/quaternion.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/quaternion.hpp
 
-/Users/zhubofei/15-462/p2/src/math/color.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/color.hpp
 math/math.hpp
-/Users/zhubofei/15-462/p2/src/math/math/math.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/math.hpp
 iostream
 -
 cassert
 -
 
-/Users/zhubofei/15-462/p2/src/math/math.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math.hpp
 algorithm
 -
 cmath
 -
 
-/Users/zhubofei/15-462/p2/src/math/matrix.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/matrix.hpp
 math/math.hpp
-/Users/zhubofei/15-462/p2/src/math/math/math.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/math.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/math/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/vector.hpp
 cassert
 -
 
-/Users/zhubofei/15-462/p2/src/math/quaternion.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/quaternion.hpp
 math/math.hpp
-/Users/zhubofei/15-462/p2/src/math/math/math.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/math.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/math/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/vector.hpp
 
-/Users/zhubofei/15-462/p2/src/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/vector.hpp
 math/math.hpp
-/Users/zhubofei/15-462/p2/src/math/math/math.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/math/math/math.hpp
 algorithm
 -
 cassert
@@ -62,27 +72,21 @@ cmath
 iostream
 -
 
-/Users/zhubofei/15-462/p2/src/scene/material.cpp
-scene/material.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/material.hpp
-application/imageio.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/imageio.hpp
-
-/Users/zhubofei/15-462/p2/src/scene/material.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/material.hpp
 math/color.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/color.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/color.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/vector.hpp
 application/opengl.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/application/opengl.hpp
 string
 -
 
-/Users/zhubofei/15-462/p2/src/scene/mesh.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/mesh.cpp
 application/opengl.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/application/opengl.hpp
 scene/mesh.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/mesh.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/mesh.hpp
 iostream
 -
 cstring
@@ -100,9 +104,9 @@ vector
 numeric
 -
 
-/Users/zhubofei/15-462/p2/src/scene/mesh.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/mesh.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/vector.hpp
 vector
 -
 cassert
@@ -112,13 +116,13 @@ unordered_map
 string
 -
 
-/Users/zhubofei/15-462/p2/src/scene/model.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/model.cpp
 scene/model.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/model.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/model.hpp
 scene/material.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/material.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/material.hpp
 application/opengl.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/application/opengl.hpp
 iostream
 -
 cstring
@@ -130,85 +134,101 @@ fstream
 sstream
 -
 
-/Users/zhubofei/15-462/p2/src/scene/model.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/model.hpp
 scene/scene.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/scene.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/scene.hpp
 scene/mesh.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/mesh.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/mesh.hpp
 
-/Users/zhubofei/15-462/p2/src/scene/scene.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene.cpp
 scene/scene.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/scene.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/scene.hpp
 ctime
 -
 
-/Users/zhubofei/15-462/p2/src/scene/scene.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene.hpp
 math/vector.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/vector.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/vector.hpp
 math/quaternion.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/quaternion.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/quaternion.hpp
 math/matrix.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/matrix.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/matrix.hpp
 math/camera.hpp
-/Users/zhubofei/15-462/p2/src/scene/math/camera.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/math/camera.hpp
 scene/material.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/material.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/material.hpp
 scene/mesh.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/mesh.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/mesh.hpp
 string
 -
 vector
 -
 
-/Users/zhubofei/15-462/p2/src/scene/sphere.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/sphere.cpp
 scene/sphere.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/sphere.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/sphere.hpp
 application/opengl.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/application/opengl.hpp
 
-/Users/zhubofei/15-462/p2/src/scene/sphere.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/sphere.hpp
 scene/scene.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/scene.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/scene.hpp
 
-/Users/zhubofei/15-462/p2/src/scene/subdivide.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/subdivide.cpp
 scene/mesh.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/mesh.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/mesh.hpp
+ctime
+-
 
-/Users/zhubofei/15-462/p2/src/scene/triangle.cpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/triangle.cpp
 scene/triangle.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/triangle.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/triangle.hpp
 application/opengl.hpp
-/Users/zhubofei/15-462/p2/src/scene/application/opengl.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/application/opengl.hpp
 
-/Users/zhubofei/15-462/p2/src/scene/triangle.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/triangle.hpp
 scene/scene.hpp
-/Users/zhubofei/15-462/p2/src/scene/scene/scene.hpp
+/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/scene/scene/scene.hpp
 
-/usr/local/include/GL/glew.h
-stddef.h
--
-inttypes.h
--
-stdint.h
--
-inttypes.h
--
-Availability.h
--
-OpenGL/glu.h
--
-GL/glu.h
--
-
-/usr/local/include/SDL/SDL_config.h
+/usr/include/SDL/SDL_config-i386.h
 SDL_platform.h
-/usr/local/include/SDL/SDL_platform.h
+/usr/include/SDL/SDL_platform.h
 stdarg.h
 -
 
-/usr/local/include/SDL/SDL_opengl.h
+/usr/include/SDL/SDL_config-x86_64.h
+SDL_platform.h
+/usr/include/SDL/SDL_platform.h
+stdarg.h
+-
+
+/usr/include/SDL/SDL_config.h
+SDL_config-i386.h
+/usr/include/SDL/SDL_config-i386.h
+SDL_config-ia64.h
+/usr/include/SDL/SDL_config-ia64.h
+SDL_config-ppc64.h
+/usr/include/SDL/SDL_config-ppc64.h
+SDL_config-ppc.h
+/usr/include/SDL/SDL_config-ppc.h
+SDL_config-s390x.h
+/usr/include/SDL/SDL_config-s390x.h
+SDL_config-s390.h
+/usr/include/SDL/SDL_config-s390.h
+SDL_config-x86_64.h
+/usr/include/SDL/SDL_config-x86_64.h
+SDL_config-arm.h
+/usr/include/SDL/SDL_config-arm.h
+SDL_config-alpha.h
+/usr/include/SDL/SDL_config-alpha.h
+SDL_config-sparc64.h
+/usr/include/SDL/SDL_config-sparc64.h
+SDL_config-sparc.h
+/usr/include/SDL/SDL_config-sparc.h
+
+/usr/include/SDL/SDL_opengl.h
 SDL_config.h
-/usr/local/include/SDL/SDL_config.h
+/usr/include/SDL/SDL_config.h
 windows.h
 -
 OpenGL/gl.h
@@ -228,5 +248,5 @@ windows.h
 stddef.h
 -
 
-/usr/local/include/SDL/SDL_platform.h
+/usr/include/SDL/SDL_platform.h
 

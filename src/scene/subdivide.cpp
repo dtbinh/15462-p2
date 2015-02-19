@@ -1,4 +1,5 @@
 #include "scene/mesh.hpp"
+#include <ctime>
 
 namespace _462 {
 
@@ -6,7 +7,7 @@ bool Mesh::subdivide() {
     generateEdgeNeighbor();
 
     //---------------------step 1: generate odd vertices------------------------
-    std:clock_t start = std::clock();
+    std::clock_t start = std::clock();
     generateOddVertices();
     double duration = (std::clock() - start)/double(CLOCKS_PER_SEC);
     std::cout << "generate odd vert took " << duration << " seconds." << std::endl;
@@ -33,8 +34,6 @@ void Mesh::generateEdgeNeighbor() {
     int numTriangles = triangles.size();
     VertMap vertMap;
     EdgeMap edgeMap;
-
-    std::vector< unsigned int > temp;
 
     MeshNeighbor neighbor_temp;
     MeshFace face_temp;
@@ -112,7 +111,7 @@ int Mesh::edgeIndexInTriangle(unsigned int v1, unsigned int v2, MeshTriangle t3)
     return -1;
 }
 
-void Mesh::generateNeighbor(unsigned int v,int v1,int v2) {
+void Mesh::generateNeighbor(unsigned int v, unsigned int v1, unsigned int v2) {
     bool flag1 = false;
     bool flag2 = false;
     for (size_t i = 0; i < neighbors[v].indices.size(); i++) {
@@ -223,7 +222,7 @@ void Mesh::generateOddVertices() {
 }
 
 int Mesh::isEdgegenerateed(unsigned int v1, unsigned int v2,
-                      EdgeList e, EdgeSingleMap* edgeMap,
+                      EdgeList &e, EdgeSingleMap* edgeMap,
                       double &duration) {
   std::clock_t start = std::clock();
   std::string key = genKeyforEdge(v1, v2);
@@ -242,7 +241,7 @@ void Mesh::adjustEvenVertices() {
     MeshVertex even_vertices_temp;		//temp storage
     MeshVertexList even_vertices_temp_list;		//temp storage
 
-    for (int i = 0; i < neighbors.size(); i++) {
+    for (unsigned int i = 0; i < neighbors.size(); i++) {
       int N = neighbors[i].indices.size();
       if (N == 2) {
         even_vertices_temp.position =
@@ -278,7 +277,7 @@ void Mesh::adjustEvenVertices() {
     }
 
     //---------------------combine and generate new mesh-----------------------
-    for (int i=0; i<triangles.size(); i++) {
+    for (unsigned int i=0; i<triangles.size(); i++) {
       for (int j=0; j<3; j++) {
         temp_vertices[triangles[i].vertices[j]] =
             even_vertices_temp_list[triangles[i].vertices[j]];
@@ -290,7 +289,7 @@ std::string Mesh::genKeyforEdge(int v1, int v2) {
   if(v1 > v2) std::swap(v1, v2);
   std::string s1 = std::to_string(v1);
   std::string s2 = std::to_string(v2);
-  return s1 + '-' + s2;
+  return s1 + 'x' + s2;
 }
 
 } /* _462 */

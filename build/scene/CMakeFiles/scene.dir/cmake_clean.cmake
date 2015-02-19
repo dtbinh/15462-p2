@@ -1,4 +1,4 @@
-file(REMOVE_RECURSE
+FILE(REMOVE_RECURSE
   "CMakeFiles/scene.dir/material.cpp.o"
   "CMakeFiles/scene.dir/mesh.cpp.o"
   "CMakeFiles/scene.dir/model.cpp.o"
@@ -11,6 +11,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
-  include(CMakeFiles/scene.dir/cmake_clean_${lang}.cmake OPTIONAL)
-endforeach()
+FOREACH(lang CXX)
+  INCLUDE(CMakeFiles/scene.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
