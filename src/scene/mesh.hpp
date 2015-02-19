@@ -71,6 +71,7 @@ public:
 
     typedef std::unordered_multimap<std::string, int> EdgeMap;
     typedef std::unordered_multimap<std::string, int>::iterator EdgeMapIterator;
+
     typedef std::unordered_map<std::string, int> EdgeSingleMap;
     typedef std::unordered_map<std::string, int>::iterator EdgeSingleMapIterator;
 
@@ -112,11 +113,11 @@ private:
     void generateEdgeNeighbor();		//generate neighbors and faces
     int edgeIndexInTriangle(unsigned int v1, unsigned int v2, MeshTriangle t3);
     void getAdjacentVertices(unsigned int v, int &v1, int &v2, MeshTriangle t3);
-    void generateNeighbor(unsigned int v, int v1, int v2); //generate neighbor in triangle
+    void generateNeighbor(unsigned int v, unsigned int v1, unsigned int v2); //generate neighbor in triangle
     void generateOddVertices();				// add odd vertices
     void adjustEvenVertices();				// update even vertices
     int isEdgegenerateed(unsigned int v1, unsigned int v2,
-                          EdgeList e, EdgeSingleMap* edgeMap, double & duration);
+                          EdgeList &e, EdgeSingleMap* edgeMap, double & duration);
     std::string genKeyforEdge(int v1, int v2); //generate edge key from given vertices
 
     static unsigned int index1[3];
