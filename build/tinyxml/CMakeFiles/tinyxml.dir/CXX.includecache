@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxml.cpp
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxml.cpp
 ctype.h
 -
 sstream
@@ -14,9 +14,9 @@ sstream
 iostream
 -
 tinyxml.h
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxml.h
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxml.h
 
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxml.h
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxml.h
 ctype.h
 -
 stdio.h
@@ -34,19 +34,19 @@ iostream
 sstream
 -
 tinystr.h
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinystr.h
+/Users/zhubofei/15-462/p2/src/tinyxml/tinystr.h
 
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxmlerror.cpp
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxmlerror.cpp
 tinyxml.h
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxml.h
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxml.h
 
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxmlparser.cpp
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxmlparser.cpp
 ctype.h
 -
 stddef.h
 -
 tinyxml.h
-/afs/andrew.cmu.edu/usr22/bofeiz/private/15462/15462-p2/src/tinyxml/tinyxml.h
+/Users/zhubofei/15-462/p2/src/tinyxml/tinyxml.h
 windows.h
 -
 
