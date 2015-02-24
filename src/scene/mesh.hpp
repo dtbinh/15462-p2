@@ -38,12 +38,12 @@ struct MeshEdge
     unsigned int vertex_new;	// index of new generated vertex
 };
 
-struct MeshNeighbor
+struct MeshVertexNeighbor
 {
-  std::vector < unsigned int > indices; //index of neighbors of given vertice
+  std::vector < unsigned int > indices; //index of neighbors of given vertex
 };
 
-struct MeshFace
+struct MeshFaceNeighbor
 {
   unsigned int vertices[3];
   int vertices_neighbor[3];		//index of neighbor vertices of edges
@@ -59,13 +59,13 @@ public:
     Mesh();
     virtual ~Mesh();
 
-    typedef std::vector< MeshTriangle > MeshTriangleList;
-    typedef std::vector< MeshVertex > MeshVertexList;
+    typedef std::vector<MeshTriangle> MeshTriangleList;
+    typedef std::vector<MeshVertex> MeshVertexList;
 
-    //----------------my added members---------------
-    typedef std::vector< MeshNeighbor > NeighborList;
-    typedef std::vector< MeshEdge > EdgeList;
-    typedef std::vector< MeshFace > FaceList2;
+    // typedefs
+    typedef std::vector<MeshVertexNeighbor> VertexNeighborList;
+    typedef std::vector<MeshEdge> EdgeList;
+    typedef std::vector<MeshFaceNeighbor> FaceNeighborList;
     typedef std::unordered_multimap<int, int> VertMap;
     typedef std::unordered_multimap<int, int>::iterator VertMapIterator;
 
@@ -74,8 +74,6 @@ public:
 
     typedef std::unordered_map<std::string, int> EdgeSingleMap;
     typedef std::unordered_map<std::string, int>::iterator EdgeSingleMapIterator;
-
-    //----------------------------------------------------
 
     // The list of all triangles in this model.
     MeshTriangleList triangles;
@@ -101,24 +99,26 @@ public:
     // Renders the mesh using opengl.
     void render() const;
 private:
-    typedef std::vector< float > FloatList;
-    typedef std::vector< unsigned int > IndexList;
+    typedef std::vector<float> FloatList;
+    typedef std::vector<unsigned int> IndexList;
 
-    MeshTriangleList temp_triangles;		 //temp storage place
-    MeshVertexList temp_vertices;        //temp storage place
-    NeighborList neighbors;
+    MeshTriangleList temp_triangles;		 //temp triangles storage
+    MeshVertexList temp_vertices;        //temp vertices storage
+    VertexNeighborList vertexNeighbors;
 
     //EdgeList edges;
-    FaceList2 faces;
+    FaceNeighborList faceNeighbors;
     void generateEdgeNeighbor();		//generate neighbors and faces
-    int edgeIndexInTriangle(unsigned int v1, unsigned int v2, MeshTriangle t3);
-    void getAdjacentVertices(unsigned int v, int &v1, int &v2, MeshTriangle t3);
-    void generateNeighbor(unsigned int v, unsigned int v1, unsigned int v2); //generate neighbor in triangle
+    int edgeIndexInTriangle(unsigned int u1, unsigned int u2, MeshTriangle t3);
+    void getAdjacentVertices(unsigned int v, int &u1, int &u2, MeshTriangle t3);
+    //generate neighbor in triangle
+    void generateVertexNeighbor(unsigned int v, unsigned int u1, unsigned int u2);
     void generateOddVertices();				// add odd vertices
     void adjustEvenVertices();				// update even vertices
-    int isEdgeGenerateed(unsigned int v1, unsigned int v2,
+    int isEdgeGenerateed(unsigned int u1, unsigned int u2,
                           EdgeList &e, EdgeSingleMap* edgeMap);
-    std::string genKeyforEdge(int v1, int v2); //generate edge key from given vertices
+    // generate edge key from given vertices
+    std::string genKeyforEdge(int u1, int u2);
 
     static unsigned int index1[3];
     static unsigned int index2[3];
